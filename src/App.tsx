@@ -27,6 +27,7 @@ function App() {
 
           <Route path="/admin" element={<LayputAdmin />}>
             <Route path="" element={<ProductsAdmin />} />
+            <Route path="products" element={<ProductsAdmin />} />
             <Route path="product-add" element={<ProductAdd />} />
             <Route path=":id/edit" element={<ProductAdd />} />
           </Route>

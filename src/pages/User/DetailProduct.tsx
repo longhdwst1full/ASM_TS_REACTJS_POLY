@@ -216,38 +216,7 @@ export default function DetailProduct() {
                 </div>
               </div>
             </div>
-            {/* <div className="mt-3.5">
-              <p>
-                Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những
-                ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ
-                tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết
-                kế và cấu hình, trong đó phải kể đến chiếc Samsung Galaxy A73
-                với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi
-                bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!
-              </p>
-            </div>
-            <div>
-              <h3 className="mt-7 mb-2 text-xl">
-                Đánh giá Samsung A73 - Hiệu năng mượt mà, chụp ảnh chuyên nghiệp
-              </h3>
-              <p>
-                Điện thoại cao cấp nhất dòng Galaxy A series sở hữu nhiều nâng
-                cấp đáng giá so với thế hệ trước, từ ngoại hình cho đến hiệu
-                năng, đặc biệt là hệ thống camera. Sau đây là những đánh giá chi
-                tiết về chiếc
-              </p>
-            </div>
-            <div>
-              <h4 className="mt-7 mb-2 text-base">
-                Thiết kế sang trọng, màn hình Super AMOLED
-              </h4>
-              <p>
-                Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ
-                quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung
-                đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác
-                sang trọng và tinh tế.
-              </p>
-            </div> */}
+      
             <div className="text-center mt-4">
               <button
                 type="button"

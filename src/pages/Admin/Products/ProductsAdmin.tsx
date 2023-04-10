@@ -11,7 +11,7 @@ export default function ProductsAdmin() {
 
   useEffect(() => {
     handlegetProductList().then((res) => {
-      console.log(res);
+     
       setProductList(res.data);
     });
   }, []);
@@ -19,9 +19,7 @@ export default function ProductsAdmin() {
     const getUserLS: IGetUserLT | "" = localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user") as string)
       : "";
-    // if(getUserLS){
-
-    // }
+   
     const confirma = confirm("Bạn có thực sự muốn xóa sản phẩm không");
     if (confirma && id) {
       setProductList(productList.filter((item) => item.id !== id));
@@ -42,8 +40,8 @@ export default function ProductsAdmin() {
             <div className="flex-1">
               <p className="mb-2 p-2">Danh muc san pham</p>
               <select
-                id="dropdownActionButton"
-                data-dropdown-toggle="dropdownAction"
+                // id="dropdownAction Button"
+                // data-dropdown-toggle="dropdownAction"
                 className="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 <option value="">Moi chon</option>

@@ -7,9 +7,12 @@ export default function LayputAdmin() {
   return (
     <div>
       <Header />
-      <main className="flex min-h-[100vh]">
+      <main className=" grid grid-cols-12 min-h-[100vh]">
         <Sibar />
+        <div className="col-span-9">
+
         <Outlet />
+        </div>
       </main>
     </div>
   );

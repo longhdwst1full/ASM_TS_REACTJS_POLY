@@ -5,7 +5,7 @@ import { handlegetProduct } from "../../../api/productApi";
 import { handlegetProductList } from "../../../api/productApi";
 
 export default function ProductsAdmin() {
-  const [productList, setProductList] = useState<I[]|[]>([]);
+  // const [productList, setProductList] = useState<IProduct[]|[]>([]);
 
   useEffect(() => {
     handlegetProductList().then((res) => {
