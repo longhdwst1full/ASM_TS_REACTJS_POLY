@@ -1,15 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Product from "../../components/Product";
-import { IProduct } from "../../type/product.type";
-import { handlegetProductList } from "../../api/productApi";
+import ProductList from "../Product/ProductList";
 
 export default function Home() {
-  const [productList, setProductList] = useState<IProduct[] | []>([]);
-
-  useEffect(() => {
-    const products = handlegetProductList();
-    products.then((data) => setProductList(data.data));
-  }, []);
   // console.log(productList);
   return (
     <div className="container m-auto">
@@ -142,11 +133,9 @@ export default function Home() {
 
       <main className="w-[calc(100%-10%)] m-auto">
         <h1 className="text-3xl font-bold py-2.5">Điện thoại nổi bật </h1>
-        <div className="w-[calc(100%-2%)] m-auto grid grid-cols-6 gap-x-6 gap-y-10">
-          {productList.map((product, index) => (
-            <Product product={product} key={index} />
-          ))}
-        </div>
+        {/* <div className="w-[calc(100%-2%)] m-auto grid grid-cols-6 gap-x-6 gap-y-10"> */}
+        <ProductList />
+        {/* </div> */}
       </main>
     </div>
   );

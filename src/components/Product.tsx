@@ -1,6 +1,5 @@
-import React from "react";
-import { IProduct } from "../type/product.type";
 import { Link } from "react-router-dom";
+import { IProduct } from "../type/products.type";
 
 interface Props {
   product: IProduct;
@@ -12,7 +11,7 @@ export default function Product({ product }: Props) {
       <div className="relative w-full pt-[100%]">
         <Link to={`/${product.id}/product`}>
           <img
-            src={product.images[0].base_url}
+            src={product.image}
             alt={product.name}
             className="absolute top-0 left-0 h-full w-full bg-white object-cover"
           />
@@ -31,7 +30,7 @@ export default function Product({ product }: Props) {
             <span className="ml-0.5">đ</span>
           </span>
           <span className="text-gray-500">
-            {product.original_price}
+            {product.price}
             <span className="ml-0.5">đ</span>
           </span>
         </div>

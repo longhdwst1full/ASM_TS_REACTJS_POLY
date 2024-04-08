@@ -9,20 +9,6 @@ export interface IProductImage {
   thumbnail_url: string;
 }
 
-export interface IProduct {
-  id: number;
-  name: string;
-  price: string;
-  original_price: string;
-  description: string;
-  images: IProductImage[];
-  brand: {
-    id: string;
-    name: string;
-    slug: string;
-  };
-  specifications: ISpecifications[];
-}
 export interface ISpecifications {
   name: string;
   attributes: {

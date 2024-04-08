@@ -12,7 +12,6 @@ export default function CartList() {
   const totalCurrentPurchasePrice = useMemo(
     () =>
       (totalPrice as ICartList[]).reduce((result, current) => {
-        
         return result + current.count * Number(current.product.price);
       }, 0),
     [totalPrice]
@@ -22,7 +21,6 @@ export default function CartList() {
   useEffect(() => {
     getCartList().then(({ data }) => setCatList(data));
   }, []);
-
 
   const handleDeleteCart = (id: number) => {
     const ab = confirm("Are you sure you want to delete");
@@ -46,11 +44,7 @@ export default function CartList() {
     });
   };
   const handleOnchangInput = (value: number | string, id: number) => {
-    // console.log(e.target.value);
-    // // if (typeof(value) == "string") {
-    //   toast.error("Moi ban nhap vao so");
-    //   return
-    // }
+ 
 
     setCount(value as number);
     descCount(count, id).then((data) => {
@@ -86,7 +80,7 @@ export default function CartList() {
                 <div className="col-span-1  w-[193px] m-auto">
                   <img
                     className="w-full object-cover"
-                    src={cart.product.images[0].base_url}
+                    src={cart.product.image}
                     alt=""
                   />
                 </div>

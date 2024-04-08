@@ -1,33 +1,33 @@
-import { IProduct } from "../type/product.type";
+import { IProduct } from "../type/products.type";
 import { http } from "./http";
-
-const handlegetProductList = async () => {
-  const result = await http.get<IProduct[]>("products");
-
-  return result;
-};
-const handlegetProduct = async (id: string) => {
-  const data = await http.get<IProduct>("products/" + id);
-  return data;
-};
-const addProduct = async (data: Omit<IProduct, "id">) => {
-  return http.post<IProduct>("products", data);
-};
-const updateProduct = async ({
+const createProducts = ({
   data,
+}: {
+  data: Omit<IProduct, "id"  >;
+}) => http.post("products", data);
+
+const productList1 = async () => await http.get<IProduct>(`products`);
+
+const getOneProduct = (id: string) => http.get<IProduct>("products/" + id);
+
+const deleteProducts = ({ id }: { id: string }) =>
+  http.delete("products/" + id, {});
+
+const udpateProducts = ({
+  body,
   id,
 }: {
-  data: Omit<IProduct, "id">;
+  body: Omit<IProduct, "id">;
   id: string;
 }) => {
-  http.patch("products/" + id, data);
+  // console.log(accessToken,id,body," admin");
+  return http.patch(`products/${id}`, body);
 };
 
-
 export {
-  handlegetProductList,
-  handlegetProduct,
-  addProduct,
-  updateProduct,
-  
+  createProducts,
+  deleteProducts,
+  getOneProduct,
+  productList1,
+  udpateProducts,
 };

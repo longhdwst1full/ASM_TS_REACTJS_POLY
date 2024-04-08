@@ -4,8 +4,8 @@ import { http } from "./http";
 export const getCartList = async () => {
   return await http.get<ICartList[]>("orders?_expand=product");
 };
-export const addtoCartUser = async (buyCount: number, idProduct: number) => {
-  return http.post<{ buyCount: number; idProduct: number }>("orders", {
+export const addtoCartUser = async (buyCount: string, idProduct: number) => {
+  return http.post<{ buyCount: string; idProduct: number }>("orders", {
     count: buyCount,
     productId: idProduct,
   });
