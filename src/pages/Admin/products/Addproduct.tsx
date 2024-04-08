@@ -58,14 +58,13 @@ export default function Addproduct() {
     defaultValues: initiaFormState,
     resolver: yupResolver(validateForm),
   });
-  console.log(watch("image"));
+
   const avatar = watch("image");
 
   // upload anh
   const hanleInputFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const fileName = e.target.files?.[0];
     if (fileName) {
-      // console.log(a);
       setFileImage(fileName);
     }
   };
@@ -74,7 +73,6 @@ export default function Addproduct() {
     mutationFn: (body: ProductForm) => createProducts({ data: body }),
 
     onSuccess() {
-      // console.log(data, "data mutation");
       reset();
       toast.success("them thanh cong");
       navigate("/admin/products");
@@ -108,8 +106,7 @@ export default function Addproduct() {
     },
   });
 
-  // getCategory
-
+ 
   const { data: categoryList } = useQuery({
     queryKey: ["getCategory"],
     queryFn: cateList,
