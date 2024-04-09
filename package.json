@@ -6,8 +6,8 @@
   "scripts": {
     "start": "json-server db.json -m ./node_modules/json-server-auth --port 5001",
     "dev": "concurrently \"vite\" \"npm run start\"",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "build": "concurrently \"npm run start\" tsc && vite build",
+    "preview": "concurrently \"npm run start\" vite preview",
     "lint": "eslint --ext ts,tsx src/",
     "lint:fix": "eslint --fix --ext ts,tsx src/",
     "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
