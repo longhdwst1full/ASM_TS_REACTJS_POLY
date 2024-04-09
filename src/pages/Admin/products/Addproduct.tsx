@@ -106,7 +106,6 @@ export default function Addproduct() {
     },
   });
 
- 
   const { data: categoryList } = useQuery({
     queryKey: ["getCategory"],
     queryFn: cateList,
@@ -138,12 +137,12 @@ export default function Addproduct() {
       if (isModel) {
         await addProductMutation.mutateAsync({
           ...data,
-          image: base64Image,
+          image: base64Image || "",
         });
       } else {
         updateProductMutation.mutate({
           ...(data as Omit<IProduct, "id">),
-          image: base64Image,
+          image: base64Image||"",
         });
       }
     } catch (error) {

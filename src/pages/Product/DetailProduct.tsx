@@ -29,7 +29,7 @@ export default function DetailProduct() {
   }, []);
 
   // add to cart
-  const addToCart = (buyCount: string, idPro: number) => {
+  const addToCart = (buyCount: number, idPro: number) => {
     addtoCartUser(buyCount, idPro).then((data) => {
       console.log(data);
       toast.success("Dat hang thanh cong");
@@ -125,7 +125,7 @@ export default function DetailProduct() {
                 <div
                   className="flex gap-2 h-auto"
                   onClick={() => {
-                    addToCart(buyCount, getproduct.id);
+                    addToCart(buyCount, +getproduct.id);
                   }}
                 >
                   <div className="flex-1 cursor-pointer rounded-md flex justify-center items-center border border-[#FF3945]">

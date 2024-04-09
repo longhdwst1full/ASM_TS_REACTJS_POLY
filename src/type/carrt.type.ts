@@ -1,5 +1,6 @@
-import { IProduct } from "./product.type";
+import { IProduct } from "./products.type";
 
+ 
 export interface ICart{
     count: number;
     productId: number;

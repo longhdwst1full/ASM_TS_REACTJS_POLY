@@ -6,7 +6,7 @@ const createProducts = ({
   data: Omit<IProduct, "id"  >;
 }) => http.post("products", data);
 
-const productList1 = async () => await http.get<IProduct>(`products`);
+const productList1 = async () => await http.get<IProduct[]>(`products`);
 
 const getOneProduct = (id: string) => http.get<IProduct>("products/" + id);
 

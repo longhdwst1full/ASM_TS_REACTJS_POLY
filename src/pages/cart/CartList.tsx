@@ -92,7 +92,7 @@ export default function CartList() {
                       <span>{cart.product.price}</span>d
                     </p>
                     <p className="ml-4 text-[#707070] text-sm">
-                      <span className="">{cart.product.original_price}</span>d
+                      <span className="">{cart.product.price}</span>d
                     </p>
                     <div className=" ml-2.5 px-1 py-1 font-normal text-xs rounded bg-[#D70018] text-white">
                       Giảm 27%
